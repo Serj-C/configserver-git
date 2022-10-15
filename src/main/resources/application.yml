@@ -1,9 +1,17 @@
 server:
   port: 8888
+encrypt:
+  key: ABCDEFGHIJKLMNOPQRSTUVWXYZ
 spring:
+  security:
+    user:
+      name: serj-c
+      password: test1234
   cloud:
     config:
       server:
+        encrypt:
+          enabled: false
         git:
           uri: https://github.com/Serj-C/spring-cloudconfig
           search-paths:
